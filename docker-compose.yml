@@ -1,0 +1,20 @@
+version: '3.5'
+
+services:
+  mongo:
+    container_name: events-mongo
+    image: mongo:4.4
+    restart: always
+    ports:
+      - 27017:27017
+    command: --wiredTigerCacheSizeGB 1
+    environment:
+      TZ: Europe/Moscow
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 5eX9axFSDv7dN2PN
+    volumes:
+      - mongodb_data_container:/data/db
+
+volumes:
+  redis_db_data:
+  mongodb_data_container:

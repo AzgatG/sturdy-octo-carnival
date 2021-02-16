@@ -1,0 +1,5 @@
+{
+  "PORT": 4005,
+  "SECRET": "jwtSecret",
+  "MONGO_URL": "mongodb://root:5eX9axFSDv7dN2PN@localhost:27017/events"
+}
